@@ -1,3 +1,5 @@
+ var repo = process.argv[2];
+ var owner = process.argv[3];
  var request = require('request');
  var downloadIMG = require('./downloadImg.js');
 
@@ -28,9 +30,8 @@ function getRepoContributors(repoOwner, repoName, cb) {
   });
 }
 
-// var avatarInfo =
 
-getRepoContributors("jquery", "jquery", function(err, result) {
+getRepoContributors(repo, owner, function(err, result) {
   console.log("Errors:", err);
   var jsonResult = JSON.parse(result);
 
@@ -41,5 +42,7 @@ getRepoContributors("jquery", "jquery", function(err, result) {
     downloadIMG(avatar_url, login + ".jpg");
   });
 
-
 });
+
+
+
