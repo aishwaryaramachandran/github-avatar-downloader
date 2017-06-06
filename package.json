@@ -19,5 +19,8 @@
   "homepage": "https://github.com/aishwaryaramachandran/github-avatar-downloader#readme",
   "dependencies": {
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
   }
 }
